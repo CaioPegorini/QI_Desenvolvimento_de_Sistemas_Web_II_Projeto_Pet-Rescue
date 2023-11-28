@@ -1,3 +1,17 @@
+<?php
+
+    if(isset($_POST['submit']))
+    {
+        print($_POST['name']);
+        print($_POST['email']);
+        print($_POST['number']);
+    }
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
