@@ -13,13 +13,13 @@
 
 <header>
     <div class="center">
-        <div class="logo"><img src="assets/img/petrascue 1 (3).png" alt=""></div><!--logo--> 
+        <div class="logo"><img src="../../assets/img/petrascue 1 (3).png" alt=""></div><!--logo--> 
         <div class="bem-vindo-usuario">
             
             <h1> Bem-vindo ao nosso sistema, 
             <?= 
             session_start();
-            $_SESSION["user_data"]["name"] ?> </h1>
+            $_SESSION["user_data"]["name"] ?></h1>
         </div>
         <div class="menu">
             <a href="../Controller/Auth.php?operation=logout">Sair</a>
@@ -47,7 +47,7 @@
 
         <div class="card C">
             <button type="submit"  class="button">
-                <a href="#">
+                <a href="lostanimal.php">
                 <img class="image" src="../../assets/img/animal-perdido.png"/>
                 </a>
             </button>

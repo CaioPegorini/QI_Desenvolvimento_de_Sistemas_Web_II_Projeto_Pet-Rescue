@@ -10,7 +10,7 @@ class OwnerlessAnimal {
     private int $age;
     private string $description;
     private string $additionalinfo;
-    private $user_number;
+    private int $user_number;
 
 
     public function __get($attribute){

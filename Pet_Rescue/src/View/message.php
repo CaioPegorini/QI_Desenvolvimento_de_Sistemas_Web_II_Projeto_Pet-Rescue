@@ -22,7 +22,8 @@
     ?>
     <div class="alert alert-danger">
         <p><?= $_SESSION["msg_error"]?></p>
-        <a href="../../index.html">Voltar</a>
+        <a href="#" onclick="history.back()">Voltar</a>
+    </div>
     <?php
     unset($_SESSION["msg_error"]);
     endif;
@@ -33,9 +34,22 @@
     ?>
     <div class="alert alert-warning">
         <p><?= $_SESSION["msg_warning"]?></p>
-        <a href="../../index.html">Voltar</a>
+        <a href="#" onclick="history.back()">Voltar</a>
+    </div>
     <?php
     unset($_SESSION["msg_warning"]);
+    endif;
+    ?>
+
+<?php
+    if (!empty($_SESSION["msg_success"])) :
+    ?>
+        <div class="alert alert-success">
+            <?= $_SESSION["msg_success"] ?>
+            <a href="#" onclick="history.back()">Voltar</a>
+        </div>
+    <?php
+        unset($_SESSION["msg_success"]);
     endif;
     ?>
 

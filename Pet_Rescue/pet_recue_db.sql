@@ -11,6 +11,12 @@ create table if not exists users (
     password char(30) not null
 );
 
+/*
+alter table users
+add constraint fk_pet_owner
+foreign key (pet_owner) references users(id);
+*/
+
 create table if not exists OwnerlessAnimal (
 	id tinyint unsigned primary key auto_increment,
     specie varchar(30) not null,
@@ -18,7 +24,7 @@ create table if not exists OwnerlessAnimal (
     description text not null,
     additionalinfo text,
     user_number varchar(13) not null,
-    constraint fk_users foreign key (user_number) references users(number)
+    /*constraint fk_users foreign key (user_number) references users(number)*/
 );
 
 create table if not exists LostPet (
@@ -28,8 +34,7 @@ create table if not exists LostPet (
     specie varchar(30) not null,
     age tinyint not null,
     description text not null,
-    additionalinfo text not null,
-    constraint fk_pet_owner foreign key (pet_owner) references users(id)
+    additionalinfo text not null
 );
 
 /*create table if not exists institution (
@@ -42,7 +47,14 @@ create table if not exists LostPet (
     constraint fk_contact foreign key (contact) references users(number)
 ); */
 
+
+
+/*insert into users values(null,"A","B","@","99","M","senha");*/
+/*insert into users values(null, "Isabelli","Assis","isabelliassis11@gmail.com","51995542423","female","Isabelli");*/
+
+select * from OwnerlessAnimal;
+/*
 select * from users;
-/*	select * from OwnerlessAnimal;
-	select * from LostPet;
-	select * from institution	*/
+select * from LostPet;
+select * from institution
+*/

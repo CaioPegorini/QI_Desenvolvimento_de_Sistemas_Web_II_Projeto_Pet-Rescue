@@ -21,9 +21,7 @@ class AnimalRepository{
         return $stmt->execute();
     }
 
-    public function findAll(){
-        
-    }
+    //public function findAll(){}
 }
 
 

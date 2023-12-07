@@ -12,10 +12,10 @@
 <body>
     <div class="container">
         <div class="form-image">
-            <img src="../../assets/img/undraw_dog_c7i6 (1).svg" alt="">
+            <img src="../../assets/img/undraw_dog_c7i6 (1).svg"alt="">
         </div>
         <div class="form">
-            <form action="../Controller/Auth.php?operation=login" method="post">
+            <form action="#">
                 <div class="form-header">
                     <div class="title">
                         <h1>Login</h1>
@@ -24,15 +24,15 @@
 
                     <div class="input-box">
                         <label for="email">E-mail</label>
-                        <input id="email" type="email" name="user_email" placeholder="Digite seu e-mail" required>
+                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
                     </div>
 
                     <div class="input-box">
                         <label for="password">Senha</label>
-                        <input id="password" type="password" name="user_password" placeholder="Digite sua senha" required>
+                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
                     </div>
                     <div class="continue-button">
-                        <button type="submit">Entrar</a></button>
+                    <button type="submit">Entrar</a></button>
                     </div>
                     </div>
                 </div>

@@ -11,11 +11,15 @@
 
 <body>
     <div class="container">
+    <div class="back-button">
+                    <button type="submit" class="button">
+                        <a href="tela-de-inicio.php">voltar</a></button>
+            </div>
         <div class="form-image">
             <img src="../../assets/img/undraw_cat_epte.svg" alt="">
         </div>
         <div class="form">
-            <form action="../Controller/AdoptionAnimal.php?operation=insert" method="post">
+            <form action="../Controller/AdoptionAnimal.php?operation=insertAnimal" method="post">
                 <div class="form-header">
                     <div class="title">
                         <h1>Cadastrar pet</h1>
@@ -59,10 +63,6 @@
 
                 </div>
             </form>
-            <div class="back-button">
-                    <button type="submit" class="button">
-                        <a href="tela-de-inicio.php">voltar</a></button>
-            </div>
         </div>
     </div>
 </body>
