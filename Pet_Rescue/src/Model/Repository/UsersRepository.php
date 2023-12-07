@@ -2,25 +2,29 @@
 
 namespace QI\PetRescue\Model\Repository;
 
-//use PDO;
+use PDO;
 
 
 class UsersRepository{
     private $connection;
-    private const TABLE = "users";
     public function __construct(){
         $this->connection = Connection::getConnection();
     }
-    public function insert($users){
-        $stmt = $this->connection->prepare("insert into users values(null,?,?,?,?,?);");
-        $stmt->bindParam(1, $users->firstname);
-        $stmt->bindParam(2, $users->lastname);
-        $stmt->bindParam(3, $users->email);
-        $stmt->bindParam(4, $users->number);
-        $stmt->bindParam(5, $users->genero);
-        $stmt->bindParam(5, $users->password);
+    public function insert($user){
+        var_dump($user);
+        exit;
+        $stmt = $this->connection->prepare("insert into users values(NULL,?,?,?,?,?,?)");
+        $stmt->bindParam(1, $user->firstname);
+        $stmt->bindParam(2, $user->lastname);
+        $stmt->bindParam(3, $user->email);
+        $stmt->bindParam(4, $user->number);
+        $stmt->bindParam(5, $user->genero);
+        $stmt->bindParam(6, $user->password);
         return $stmt->execute();
+        //DROP TABLE users;
+
     }
+
 
     //public function findAll() {
     //    $smtm = $this->connection->query("select c.*,u.name from users c inner join users u on c.users_id = u.id;

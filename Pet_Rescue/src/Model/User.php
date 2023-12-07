@@ -20,8 +20,13 @@ class User{
         $this->$attribute = $value;
     }
 
-    public function __construct($email) {
+    public function __construct($firstname, $lastname, $email, $number, $genero, $password) {
+        $this->firstname = $firstname;
+        $this->lastname = $lastname;
         $this->email = $email;
+        $this->number = $number;
+        $this->genero = $genero;
+        $this->password = $password;
     }
 }
 

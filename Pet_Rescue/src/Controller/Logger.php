@@ -9,7 +9,7 @@ class Logger {
         if(!is_dir($dir_path)){
             mkdir($dir_path); //ou seja, se não existir esta pasta/diretório "log", então MAKE DIRetório
         }
-        $file_path = $dir_path . date("Y-m-d H-i-s") . "log"; //para salvar os logs em algum formato, neste caso, o tipo "date"
+        $file_path = $dir_path . date("Y-m-d H-i-s") . ".log"; //para salvar os logs em algum formato, neste caso, o tipo "date"
         $file = fopen($file_path, "w");
         fwrite($file, $log);
         fclose($file);

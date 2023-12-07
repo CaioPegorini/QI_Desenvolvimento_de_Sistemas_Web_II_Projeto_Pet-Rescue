@@ -1,6 +1,6 @@
 <?php
 
-namespace PEtRescue\Controller;
+namespace QI\PetRescue\Controller;
 
 session_start();
 

@@ -32,7 +32,7 @@
                         <input id="password" type="password" name="user_password" placeholder="Digite sua senha" required>
                     </div>
                     <div class="continue-button">
-                        <button><a href="tela-de-inicio.php">Entrar</a></button>
+                        <button type="submit">Entrar</a></button>
                     </div>
                     </div>
                 </div>

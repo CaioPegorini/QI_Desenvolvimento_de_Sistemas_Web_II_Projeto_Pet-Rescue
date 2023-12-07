@@ -1,16 +1,3 @@
-<?php
-
-    if(isset($_POST['submit']))
-    {
-        print($_POST['name']);
-        print($_POST['email']);
-        print($_POST['number']);
-    }
-
-
-
-?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -29,7 +16,7 @@
             <img src="../../assets/img/undraw_dog_c7i6 (1).svg" alt="">
         </div>
         <div class="form">
-            <form action="#">
+            <form action="../Controller/Users.php?operation=insert" method="post">
                 <div class="form-header">
                     <div class="title">
                         <h1>Cadastre-se</h1>
@@ -98,7 +85,7 @@
                 </div>
 
                 <div class="continue-button">
-                    <button><a href="../../index.html">Continuar</a> </button>
+                    <button type="submit">Continuar</button>
                 </div>
             </form>
         </div>

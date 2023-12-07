@@ -7,7 +7,7 @@ class LostPet {
 
     private string $id;
     private string $petname;
-    private string $user;
+    private string $pet_owner;
     private string $specie;
     private int $age;
     private string $description;

@@ -16,18 +16,17 @@
     session_start();
     ?>
 
-    <!--
+    
     <?php
-    //if(!empty($_SESSION["msg_error"])) :
+    if(!empty($_SESSION["msg_error"])) :
     ?>
     <div class="alert alert-danger">
         <p><?= $_SESSION["msg_error"]?></p>
         <a href="../../index.html">Voltar</a>
     <?php
-    //unset($_SESSION["msg_error"]);
-    //endif;
+    unset($_SESSION["msg_error"]);
+    endif;
     ?>
-    -->
 
     <?php
     if (!empty($_SESSION["msg_warning"])) :
