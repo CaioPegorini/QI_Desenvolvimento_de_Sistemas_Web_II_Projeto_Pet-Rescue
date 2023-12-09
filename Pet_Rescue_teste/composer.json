@@ -1,0 +1,14 @@
+{
+  "name": "qi/pet_rescue",
+  "type": "project",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "QI\\SistemaDeChamados\\": "src/"
+    },
+    "files": [
+      "Config.php"
+    ]
+  },
+  "require": {}
+}

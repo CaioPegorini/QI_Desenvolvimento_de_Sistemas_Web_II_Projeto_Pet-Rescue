@@ -1,0 +1,1 @@
+C:\xampp\htdocs\QI_Desenvolvimento_de_Sistemas_Web_II_Projetos\Pet_Rescue_teste\src\Model\Repository\AnimalRepository.php - 22 - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pet_rescue_teste.ownerlessanima' doesn't exist
