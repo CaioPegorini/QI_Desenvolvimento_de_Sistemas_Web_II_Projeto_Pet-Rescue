@@ -8,7 +8,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Help Desk - Lista de chamados</title>
+    <title>Página de Adoção</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 </head>
@@ -16,8 +16,7 @@ session_start();
 <body class="m-5">
     <nav class="bg-info p-3 d-flex justify-content-between">
         <div>
-            <a href="add-new-call.php" class="text-decoration-none text-white">Novo chamado</a>
-            <a href="#" class="text-decoration-none text-white">Lista de chamados</a>
+            <a href="adotation.php" class="text-decoration-none text-white">Cadastrar Pet</a>
         </div>
         <a href="../Controller/Auth.php?operation=logout" class="text-decoration-none text-white">Sair</a>
     </nav>
@@ -25,11 +24,11 @@ session_start();
         <table class="table table-bordered table-primary">
             <thead>
                 <th>#</th>
-                <th>Nome do usuário</th>
-                <th>Código do equipamento</th>
-                <th>Classificação</th>
+                <th>Espécie</th>
+                <th>Idade</th>
                 <th>Descrição</th>
-                <th>Observações</th>
+                <th>Informações adicionais</th>
+                <th>Contato</th>
                 <th>Ações</th>
             </thead>
             <tbody>
@@ -65,7 +64,7 @@ session_start();
                                 <a href="../Controller/Call.php?operation=findOne&code=<?= $call["id"] ?>" class="btn btn-warning">
                                     <i class="bi bi-pencil"></i>
                                 </a>
-                                <a href="../Controller/Call.php?operation=delete&code=<?= $call["id"] ?>" class="btn btn-danger">
+                                <a href="../Controller/AdoptionAnimal.php?operation=delete&code=<?= $animal["id"] ?>" class="btn btn-danger">
                                     <i class="bi bi-trash"></i>
                                 </a>
                             </div>

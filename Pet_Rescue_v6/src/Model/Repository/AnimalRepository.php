@@ -25,6 +25,11 @@ class AnimalRepository{
         $stmt = $this->connection->query("select * from OwnerlessAnimal");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function delete($id){
+        $stmt = $this->connection->query("delete * from OwnerlessAnimal where id=$id");
+        return $stmt->execute();
+    }
 }
 
 

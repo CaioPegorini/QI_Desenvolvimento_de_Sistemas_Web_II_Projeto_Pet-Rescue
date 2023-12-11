@@ -15,6 +15,9 @@ switch ($_GET["operation"]) {
     case "findAllAnimals":
         findAllAnimals();
         break;
+    case "deleteAnimal":
+        deleteAnimal();
+        break;
     default:
         $_SESSION["msg_warning"] = "Operação inválida!";
         header("location:../View/message.php");
@@ -54,6 +57,31 @@ function findAllAnimals(){
     $animal_repository = new AnimalRepository();
     $_SESSION["OwnerlessAnimal"] = $animal_repository->findAll();
     header("location:../View/for-adoption.php");
+}
+
+function deleteAnimal(){
+    $id = $_GET["id"];
+    if (empty($id)) {
+        $_SESSION["msg_error"] = "O código do animal é inválido!!!";
+        header("location:../View/message.php");
+        exit;
+    } try {
+        $animal_repository = new AnimalRepository;
+        $result = $animal_repository->delete($id);
+
+        if ($result) {
+            $_SESSION["msg_success"] = "Animal removido da plataforma com sucesso!";
+        } else {
+            $_SESSION["msg_warning"] = "Lamento, não foi possível remover o animal da plataforma.";
+        }
+    }
+      catch (Exception $e) {
+        $_SESSION["msg_error"] = "Ops. Houve um erro inesperado em nossa base de dados!!!";
+        $log = $e->getFile() . " - " . $e->getLine() . " - " . $e->getMessage();
+        Logger::writeLog($log);
+    } finally {
+        header("location:../View/message.php");
+    }
 }
 
 
