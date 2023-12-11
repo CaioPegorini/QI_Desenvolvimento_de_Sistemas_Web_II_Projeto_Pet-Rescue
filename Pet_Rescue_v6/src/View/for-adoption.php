@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -30,31 +34,31 @@
             </thead>
             <tbody>
                 <?php
-                if (empty($_SESSION["list-of-calls"])) :
-                ?>
-                    <td colspan=6>Não existem chamados cadastrados</td>
-                <?php
-                endif;
-                foreach ($_SESSION["list-of-calls"] as $call) :
+                if (empty($_SESSION["OwnerlessAnimal"])): 
+                    ?>
+                    <td colspan=6>Não existem animais cadastrados</td>
+                    <?php
+                    endif;
+                    foreach ($_SESSION["OwnerlessAnimal"] as $animal) :
                 ?>
                     <tr>
                         <td>
-                            <?= $call["id"] ?>
+                            <?= $animal["id"] ?>
                         </td>
                         <td>
-                            <?= $call["name"] ?>
+                            <?= $animal["specie"] ?>
                         </td>
                         <td>
-                            <?= $call["equipment_id"] ?>
+                            <?= $animal["age"] ?>
                         </td>
                         <td>
-                            <?= $call["classification"] ?>
+                            <?= $animal["description"] ?>
                         </td>
                         <td>
-                            <?= $call["description"] ?>
+                            <?= $animal["additionalinfo"] ?>
                         </td>
                         <td>
-                            <?= ($call["notes"]) ? $call["notes"] : "Nenhuma observação" ?>
+                            <?= $animal["user_number"] ?>
                         </td>
                         <td>
                             <div class="btn-group">

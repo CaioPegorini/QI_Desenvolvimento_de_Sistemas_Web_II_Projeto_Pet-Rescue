@@ -12,7 +12,10 @@ switch ($_GET["operation"]) {
     case "insert":
         insertAnimal();
         break;
-    deafult:
+    case "findAllAnimals":
+        findAllAnimals();
+        break;
+    default:
         $_SESSION["msg_warning"] = "Operação inválida!";
         header("location:../View/message.php");
         exit;
@@ -49,7 +52,7 @@ function insertAnimal(){
 
 function findAllAnimals(){
     $animal_repository = new AnimalRepository();
-    $_SESSION["for-adoption"] = $animal_repository->findAll();
+    $_SESSION["OwnerlessAnimal"] = $animal_repository->findAll();
     header("location:../View/for-adoption.php");
 }
 

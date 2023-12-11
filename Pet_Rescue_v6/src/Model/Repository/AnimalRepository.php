@@ -22,7 +22,7 @@ class AnimalRepository{
     }
 
     public function findAll(){
-        $stmt = $this->connection->query("select from OwnerlessAnimal");
+        $stmt = $this->connection->query("select * from OwnerlessAnimal");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
