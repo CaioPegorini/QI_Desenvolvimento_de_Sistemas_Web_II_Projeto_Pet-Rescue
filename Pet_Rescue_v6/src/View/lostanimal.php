@@ -14,8 +14,10 @@
                 <ul>
                     <li><a href="#catalog">Catalogo</a></li>
                     <li><a href="#about">sobre</a></li>
-                    <li><a href="#feature">Característica</a></li>
-                    <button type="submit">Cadastrar</button>
+            <button type="submit"  class="button">
+                <a href="adotation.php">Anunciar Pet Perdido</a>
+            </button>
+        
                 </ul>
             </nav>
             <div class="header-block">
@@ -93,58 +95,6 @@
             <p>
             Aqui é um cantinho na internet dedicado a animais perdidos. Aqui, fotos e histórias de pets desaparecidos são compartilhadas, enquanto pessoas se unem para ajudar a encontrar esses companheiros. Comentários solidários e mensagens de apoio se multiplicam, formando uma rede de esperança. É um refúgio virtual onde o amor por esses animais ultrapassa fronteiras, buscando reunir esses amigos de quatro patas com suas famílias.
             </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="feature" id="feature">
-      <div class="content">
-        <div class="title-wrapper-features">
-          <h3>Características comuns</h3>
-        </div>
-        <div class="feature-card-block">
-          <div class="feature-card-item">
-            <img src="../../assets/img/Dog-png.webp" alt="Feature">
-            <div class="feature-text-content">
-              <h3>Title</h3>
-              <p>Pelo caramelo e porte médio</p>
-            </div>
-          </div>
-          <div class="feature-card-item">
-            <img src="../../assets/img/Dog-png.webp" alt="Feature">
-            <div class="feature-text-content">
-              <h3>Title</h3>
-              <p>Pelo caramelo e porte médio</p>
-            </div>
-          </div>
-          <div class="feature-card-item">
-            <img src="../../assets/img/Dog-png.webp" alt="Feature">
-            <div class="feature-text-content">
-              <h3>Title</h3>
-              <p>Pelo caramelo e porte médio</p>
-            </div>
-          </div>
-          <div class="feature-card-item">
-            <img src="../../assets/img/Dog-png.webp" alt="Feature">
-            <div class="feature-text-content">
-              <h3>Title</h3>
-              <p>Pelo caramelo e porte médio</p>
-            </div>
-          </div>
-          <div class="feature-card-item">
-            <img src="../../assets/img/Dog-png.webp" alt="Feature">
-            <div class="feature-text-content">
-              <h3>Title</h3>
-              <p>Pelo caramelo e porte médio</p>
-            </div>
-          </div>
-          <div class="feature-card-item">
-            <img src="../../assets/img/Dog-png.webp" alt="Feature">
-            <div class="feature-text-content">
-              <h3>Title</h3>
-              <p>Pelo caramelo e porte médio</p>
-            </div>
           </div>
         </div>
       </div>

@@ -27,7 +27,22 @@ class AnimalRepository{
     }
 
     public function delete($id){
-        $stmt = $this->connection->query("delete * from OwnerlessAnimal where id=$id");
+        $stmt = $this->connection->query("delete from OwnerlessAnimal where id=$id");
+        return $stmt->execute();
+    }
+
+    public function findOne($id){
+        $stmt = $this->connection->query("select * from OwnerlessAnimal where id=$id");
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
+    public function update($animal){
+        $stmt = $this->connection->prepare("update OwnerlessAnimal set specie = ?, age = ?, description = ?, additionalinfo = ?, user_number = ? where id = ?");
+        $stmt->bindParam(1, $animal->specie);
+        $stmt->bindParam(2, $animal->age);
+        $stmt->bindParam(3, $animal->description);
+        $stmt->bindParam(4, $animal->additionalinfo);
+        $stmt->bindParam(5, $animal->user_number);
         return $stmt->execute();
     }
 }
